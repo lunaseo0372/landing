@@ -279,7 +279,12 @@
   <!-- TikTok Pixel — событие на клик по кнопке -->
   <script>
     document.getElementById('tg-btn').addEventListener('click', function() {
-      ttq.track('Subscribe'); // Фиксируем конверсию в TikTok
+      ttq.track('Subscribe', {
+        "contents": [{"content_id": "tg_channel", "content_type": "product", "content_name": "1 Million Dollar Telegram"}],
+        "value": 0,
+        "currency": "USD",
+        "status": "submitted"
+      });
     });
   </script>
 
